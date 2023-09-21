@@ -6,7 +6,7 @@ from tasks.models import Task, Comment
 class CommentTaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ['author', 'body']
+        fields = ["author", "body"]
 
 
 class TaskSerializer(serializers.ModelSerializer):
@@ -16,8 +16,8 @@ class TaskSerializer(serializers.ModelSerializer):
         model = Task
         fields = "__all__"
         read_only_fields = [
-            'is_completed',
-            'assignee',
+            "is_completed",
+            "assignee",
         ]
 
 

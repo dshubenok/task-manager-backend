@@ -24,11 +24,16 @@ class Task(BaseModel):
         HIGH = "HG", "High"
 
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    description = models.TextField(
+        blank=True,
+        null=True,
+    )
     owner = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
         related_name="owner_tasks",
+        blank=True,
+        null=True,
     )
     assignee = models.ForeignKey(
         User,

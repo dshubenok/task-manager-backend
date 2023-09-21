@@ -130,4 +130,5 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'Simple task manager that allows you to assign tasks with priorities and statuses',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
+    'SCHEMA_PATH_PREFIX': '/api/v[0-9]',
 }
